@@ -47,17 +47,18 @@ const handleBeform = (e) => {
 }
 
 const downloadData = () => {
-  const URL = 'https://mocki.io/v1/9ae92a6f-7db1-4a23-a8fd-2e6151449bc7'
-  axios.get(URL).then((res) => {
-    const temp = res.data.SmartDevice[2].id.SmartTemperatureSensor.temperature
+  const URL = ["https://mocki.io/v1/dcbc8fac-8740-4c00-b078-a85691a3d893", "https://mocki.io/v1/587e3460-805e-4ab2-9815-b08467f1b840", "https://mocki.io/v1/3f9a5768-9a2c-412d-877f-c370169fc2d0"] 
+
+  axios.get(URL[Math.floor(Math.random()*URL.length)]).then((res) => {
+    const temp = res.data.devices[2].temperature
     tempData.textContent = temp + ' °C'
-    const brightness = res.data.SmartDevice[0].id.SmartBulb.brightness
+    const brightness = res.data.devices[0].brightness
     brightnessData.textContent = brightness + ' %'
-    const color = res.data.SmartDevice[0].id.SmartBulb.color
+    const color = res.data.devices[0].color
     colorData.textContent = color
 
     connectionData.forEach((el) => {
-      let connection = res.data.SmartDevice[`${num3}`].connectionState
+      let connection = res.data.devices[`${num3}`].connectionState
       el.setAttribute('num', `${num3}`)
       num3++
 
@@ -68,9 +69,9 @@ const downloadData = () => {
       el.textContent = connection
     })
 
-    const power = res.data.SmartDevice[1].id.SmartOutlet.powerConsumption
+    const power = res.data.devices[1].powerConsumption
     powerData.textContent = power + ' W'
-    console.log(res.data.SmartDevice)
+    console.log(res.data.devices)
   })
 }
 

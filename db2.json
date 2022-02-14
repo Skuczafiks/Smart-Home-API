@@ -1,0 +1,32 @@
+{
+
+"devices": [
+
+  {
+    "type": "bulb",
+    "id": "1",
+    "name": "SmartBulb",
+    "connectionState": "poorConnection",
+    "isTurnedOn": true,
+    "brightness": 20, 
+    "color": "green"
+  },
+  
+  {
+    "type": "outlet",
+    "id": "2",
+    "name": "SmartOutlet",
+    "connectionState": "connected", 
+    "isTurnedOn": false,
+    "powerConsumption": 5  
+  },
+  
+  {
+    "type": "temperatureSensor",
+    "id": "3",
+    "name": " SmartTemperatureSensor",
+    "connectionState": "disconneted", 
+     "temperature": 25 
+  }
+]
+}
