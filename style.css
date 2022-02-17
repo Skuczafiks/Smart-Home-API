@@ -57,8 +57,8 @@ body {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  width: 100px;
-  height: 130px;
+  width: 150px;
+  height: 170px;
   border-radius: 10px;
   border: 5px solid white;
   color: white;
@@ -71,6 +71,13 @@ body {
 }
 
 .items h6 {
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 8px;
+}
+
+.items h3 {
   margin-top: 10px;
   text-transform: uppercase;
   font-size: 8px;
@@ -152,8 +159,8 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-  border: 3px solid white;
-
+  border: 3px solid rgba(255, 255, 255, 0.685);
+  background-color: #0049616e;
   visibility: hidden;
   touch-action: none;
   user-select: none;
@@ -222,8 +229,9 @@ i {
   position: relative;
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 25%;
   height: 10px;
+  margin: 10px;
   cursor: pointer;
 }
 
